@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    double count = size.width / 250;
+    double count = size.width / 300;
 
     filteredPahlawans = kategori == "Semua"
         ? pahlawans
@@ -67,6 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           _buildKategoriSection(),
           Expanded(
+            flex: 1,
             child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: count.toInt() + 1),

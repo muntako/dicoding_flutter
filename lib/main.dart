@@ -19,8 +19,11 @@ class _MainAppState extends State<MainApp> {
     return MaterialApp(
       title: "Pahlawan Indonesia",
       theme: ThemeData(
-        primaryColor: Colors.redAccent,
-        primarySwatch: Colors.red,
+        useMaterial3: false,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.redAccent,
+          brightness: Brightness.light,
+        ),
       ),
       initialRoute: 'splash',
       routes: <String, WidgetBuilder>{
